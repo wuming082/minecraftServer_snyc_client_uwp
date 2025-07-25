@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mineraftServer_snyc));
             progressBar1 = new ProgressBar();
             textBox1 = new TextBox();
             button1 = new Button();
@@ -40,7 +41,8 @@
             button4 = new Button();
             label5 = new Label();
             richTextBox1 = new RichTextBox();
-            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // progressBar1
@@ -50,7 +52,7 @@
             progressBar1.Location = new Point(11, 364);
             progressBar1.Margin = new Padding(3, 3, 20, 3);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(347, 26);
+            progressBar1.Size = new Size(328, 26);
             progressBar1.TabIndex = 2;
             progressBar1.Click += progressBar1_Click;
             // 
@@ -63,7 +65,7 @@
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.RightToLeft = RightToLeft.No;
-            textBox1.Size = new Size(377, 29);
+            textBox1.Size = new Size(358, 29);
             textBox1.TabIndex = 3;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
@@ -71,7 +73,7 @@
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            button1.Location = new Point(397, 326);
+            button1.Location = new Point(378, 326);
             button1.Name = "button1";
             button1.Size = new Size(60, 29);
             button1.TabIndex = 4;
@@ -82,7 +84,7 @@
             // button2
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Location = new Point(370, 8);
+            button2.Location = new Point(355, 8);
             button2.Name = "button2";
             button2.Size = new Size(83, 29);
             button2.TabIndex = 5;
@@ -118,7 +120,7 @@
             // 
             button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button3.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            button3.Location = new Point(365, 364);
+            button3.Location = new Point(346, 364);
             button3.Name = "button3";
             button3.Size = new Size(92, 26);
             button3.TabIndex = 8;
@@ -140,7 +142,7 @@
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Location = new Point(370, 43);
+            button4.Location = new Point(354, 43);
             button4.Name = "button4";
             button4.Size = new Size(84, 29);
             button4.TabIndex = 11;
@@ -161,38 +163,35 @@
             // 
             // richTextBox1
             // 
+            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             richTextBox1.BackColor = SystemColors.ActiveCaption;
             richTextBox1.BorderStyle = BorderStyle.None;
             richTextBox1.CausesValidation = false;
-            richTextBox1.Location = new Point(463, 8);
+            richTextBox1.Location = new Point(444, 8);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
+            richTextBox1.RightToLeft = RightToLeft.Yes;
             richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox1.Size = new Size(344, 382);
+            richTextBox1.Size = new Size(344, 381);
             richTextBox1.TabIndex = 13;
             richTextBox1.Text = "";
             // 
-            // label1
+            // pictureBox1
             // 
-            label1.BackColor = SystemColors.ActiveCaption;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Dock = DockStyle.Right;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            label1.Location = new Point(463, 8);
-            label1.Name = "label1";
-            label1.RightToLeft = RightToLeft.Yes;
-            label1.Size = new Size(346, 383);
-            label1.TabIndex = 0;
-            label1.Text = "current no search mineraft server online....\r\n";
-            label1.TextAlign = ContentAlignment.TopRight;
-            label1.Click += label1_Click;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(11, 79);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(40, 36);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
             // 
             // mineraftServer_snyc
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(817, 399);
+            ClientSize = new Size(798, 399);
+            Controls.Add(pictureBox1);
             Controls.Add(richTextBox1);
             Controls.Add(label5);
             Controls.Add(button4);
@@ -204,12 +203,14 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(progressBar1);
-            Controls.Add(label1);
             Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(733, 438);
             Name = "mineraftServer_snyc";
             Padding = new Padding(8);
             Text = "mineraftMod_snyc";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -227,6 +228,6 @@
         private Button button4;
         private Label label5;
         private RichTextBox richTextBox1;
-        private Label label1;
+        private PictureBox pictureBox1;
     }
 }
